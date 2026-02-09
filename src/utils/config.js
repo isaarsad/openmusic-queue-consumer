@@ -3,7 +3,7 @@ import 'dotenv/config';
 const loadEnv = (key) => {
   const value = process.env[key];
 
-  if (value === undefined) {
+  if (value === undefined || value === '') {
     throw new Error(`Config Error: ${key} is missing from .env`);
   }
 
